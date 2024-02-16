@@ -17,3 +17,9 @@ Also give a theoretical argument for why X could or could not be correct, based
 on the complexity of the general sorting problem we covered in class.
 
 Add your answers to this markdown file.
+
+## Answer
+
+To verify this claim using the black-box, I would execute the algorithm on data sets of various sizes and see how they compare. We would expect a data set of size $2n$ to take about twice as long to sort than a list of size $n$. Generalizing this, we can say that a list of size $x*n$ will take $x$ times longer to sort than an $n$ sized list. For further insight on how it works, we could try different patterns to see what is the best case and worst case input for this algorithm. Running enough of these tests, we could plot the results and hope to see some type of linear relationship, adjusting the axes and scaling as necessary. 
+
+However, theoretically, this algorithm cannot have a runtime of $O(n)$ because it would defy the complexity of the sorting problem itself. We could try to develop a decision tree with height $n$ instead of $n\log n$ and we would find that there wouldn't be enough leaves; some possible permutations of the array would be missing, therefore some lists will not be able to get sorted. 
